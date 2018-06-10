@@ -1,0 +1,225 @@
+<!doctype html>
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>to do list</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <h1 class="main-title">This is Title</h1>
+    <nav>
+      <div class="menu">
+        <a class="menu__item  menu__item_marked" href="#item_marked"><span class="checkmark"></span>2</a>
+        <a class="menu__item  menu__item_normal" href="#item_normal"><span class="checkmark"></span>6</a>
+        <a class="menu__item  menu__item_done" href="#item_done"><span class="checkmark"></span>3</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <section id="item_add">
+      <div class="list-item  list-item_add">
+        <label class="list-item-label">
+          <span class="list-item-label_add">+</span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Add new task</div>
+      </div>
+    </section>
+
+    <section id="item_marked">
+      <div class="list-item  list-item_marked">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-10 12:00</span>
+          <span class="list-item-badges__attachment">1</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+      <div class="list-item  list-item_marked">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-10 12:00</span>
+          <span class="list-item-badges__attachment">1</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="item_normal">
+      <div class="list-item  list-item_normal">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-10 12:00</span>
+          <span class="list-item-badges__comment">1</span>
+        </div>
+      </div>
+      <div class="list-item  list-item_normal">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__attachment">2</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+      <div class="list-item  list-item_normal">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-8 16:30</span>
+          <span class="list-item-badges__attachment">1</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+      <div class="list-item  list-item_normal">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-8 16:30</span>
+          <span class="list-item-badges__comment">1</span>
+        </div>
+      </div>
+      <div class="list-item  list-item_normal">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__attachment">2</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+      <div class="list-item  list-item_normal">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-8 16:30</span>
+          <span class="list-item-badges__attachment">1</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="item_done">
+      <div class="list-item  list-item_done">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox" checked="">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-8 16:30</span>
+          <span class="list-item-badges__attachment">1</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+      <div class="list-item  list-item_done">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox" checked="">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-8 16:30</span>
+          <span class="list-item-badges__attachment">1</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+      <div class="list-item  list-item_done">
+        <label class="list-item-label">
+          <input class="list-item-label_checkbox" type="checkbox" checked="">
+          <span class="list-item-label_checkmark"></span>
+        </label>
+        <div class="list-item_title" onclick="popupOpen()">Something to do.</div>
+        <div class="list-item-mark"></div>
+        <div class="list-item-badges" onclick="popupOpen()">
+          <span class="list-item-badges__deadline">2018-6-8 16:30</span>
+          <span class="list-item-badges__attachment">1</span>
+          <span class="list-item-badges__comment">2</span>
+        </div>
+      </div>
+    </section>
+    
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-box">
+      <div class="popup-box-top">
+      </div>
+      <div class="popup-box-main">
+        <div class="form-item">
+          <input id="todo-title" class="form-item__input_title" type="text" value="" placeholder="Type things to do here...">
+        </div>
+        <div class="list-mark"></div>
+        <div class="form-item">
+          <label><span class="from-item__label from-item__deadline">Deadline</span></label>
+          <input id="todo-time" class="form-item__input_date" type="date" value="2018-06-10">
+          <input id="todo-time" class="form-item__input_time" type="time" value="12:00">
+        </div>
+        <div class="form-item">
+          <label><span class="from-item__label from-item__attachment">Attachment</span></label>
+          <input class="form-item__input_file" type="file">
+        </div>
+        <div class="form-item">
+          <label class="form-item"><span class="from-item__label  from-item__comment">Comment</span></label>
+          <textarea class="form-item__textarea_comment"></textarea>
+        </div>
+      </div>
+      <div class="popup-box-bottom">
+        <a class="popup-box-bottom_delete">delete</a>
+        <a class="popup-box-bottom_save">save</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var popup = document.getElementById("popup");
+
+    function popupOpen() {
+      popup.style.display = "block";
+    }
+    window.onclick = function(event) {
+      if (event.target == popup) {
+        popup.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
