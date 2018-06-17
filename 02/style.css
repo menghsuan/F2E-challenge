@@ -28,14 +28,17 @@ footer{ text-align: center; color: #b3b3b3; font-weight: 100; font-size: .8em; l
 .content_w:after{ content: ""; display: block; clear: both; }
 
 @media screen and (max-width: 480px) {
+  
   .content_w{ width: calc( 100% - 1.2em ); }
 }
 @media screen and (max-width:767px) {
+  body{ font-size: .85em; }
   aside{ margin-top: 60px }
   .content_w{ width: calc( 100% - 1.2em ); }
   .main{ margin-top: 10px; }
 }
 @media screen and (min-width:768px) {
+  body{ font-size: 0.9em; }
   aside{ margin-top: 60px }
   .content_w{ width: calc( 100% - 1.2em ); }
   .main{ margin-top: 10px; }
@@ -55,9 +58,7 @@ header{ width: 100%; height: 60px; line-height: 60px; border-bottom: 0px solid #
 .header__search-box_mobile input { display: block; width: 100%; height: 60px; padding: .8em .8em .8em 1.2em; border: none; font-size: 1.8em; font-family: 'Ubuntu', sans-serif; background: url(images/search.png) 0 center no-repeat; background-size: 24px; }
 .header__search-box_mobile input::placeholder {color: #333; }
 
-@media screen and (max-width: 480px) {
-
-}
+@media screen and (max-width: 480px) { }
 @media screen and (max-width: 767px) {
   header{ border-bottom: 1px solid #f2f2f2; }
   .header__logo{ display: none; }
@@ -135,7 +136,7 @@ header{ width: 100%; height: 60px; line-height: 60px; border-bottom: 0px solid #
 }
 @media screen and (max-width:767px) {
   .article{ padding-bottom: 1em; }
-  .article-title{ padding: 0.5em; }
+  .article-title{ padding: 0.8em 0 0 0.5em; }
   .article-text{ padding: 0 0.5em; }
   .article-text:after{ right: 0.5em; }
   .article-notes{ padding: 0 0.5em; }
@@ -143,7 +144,7 @@ header{ width: 100%; height: 60px; line-height: 60px; border-bottom: 0px solid #
 @media screen and (min-width:768px) {
   .article{ position: relative; height: 12em; padding-left: calc( 35% + 10px); padding-right: 10px; }
   .article-main-img{ position: absolute; width: 35%; height: calc(12em - 2px); top: 0; left: 0; }
-  .article-title{ padding: 0.5em 0 0; }
+  .article-title{ padding: 0.8em 0 0; }
 }
 @media screen and (min-width:1020px){
 }
@@ -167,19 +168,3 @@ header{ width: 100%; height: 60px; line-height: 60px; border-bottom: 0px solid #
 .pagination-next_arrow{ -webkit-transform: rotate(-45deg); transform: rotate(-45deg); }
 
 .pagination-prev.disable .pagination-prev_arrow, .pagination-next.disable .pagination-next_arrow{ border-color: #cccccc; }
-
-
-
-
-@media screen and (max-width: 480px) {
-}
-@media screen and (max-width:767px) {
-}
-@media screen and (min-width:768px) {
-}
-@media screen and (min-width:1020px){
-}
-
-
-
-
