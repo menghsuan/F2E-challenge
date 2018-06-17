@@ -7,8 +7,10 @@ source : [The F2E - 前端修練精神時光屋](https://github.com/hexschool/Th
 
 - Demo : [link](https://menghsuan.github.io/F2E-challenge/01/)
 
+  - UI | CSS web layout 
 
-### week 02 : Filter
+### week 02 : Filter 
 
 - Demo : [link](https://menghsuan.github.io/F2E-challenge/02/)
 
+  - UI | CSS web layout | Responsive Web Design
