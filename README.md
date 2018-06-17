@@ -6,3 +6,9 @@ source : [The F2E - 前端修練精神時光屋](https://github.com/hexschool/Th
 ### week 01 : To do list
 
 - Demo : [link](https://menghsuan.github.io/F2E-challenge/01/)
+
+
+### week 02 : Filter
+
+- Demo :[link](https://menghsuan.github.io/F2E-challenge/02/)
+
