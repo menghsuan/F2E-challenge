@@ -1,0 +1,117 @@
+@charset "UTF-8";
+:root {
+  --green-color: #9ccc66;
+  --red-color: #e55c73;
+  --blue-color: #73ace5;
+}
+
+/*------------------------------------*\
+Base
+\*------------------------------------*/
+
+body{
+  margin: 0; font-family:'Roboto Slab','Roboto', 'Noto Sans TC', Helvetica, Arial, 'Microsoft Yahei','微軟正黑體', 'Microsoft JhengHei', SimSun, STXihei, arial, sans-serif;
+  color: #333333; background-color: #f0f0f0; word-wrap: break-word;
+}
+*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+img{ border: 0px; vertical-align: middle; line-height: 0; width: 100%; height: auto; }
+input{ -webkit-appearance: none; font-size: 1em; }
+input[type="checkbox"] { -webkit-appearance: checkbox; }
+textarea:focus, input:focus{ outline: none; }
+a { text-decoration: none; }
+a:hover,a:focus { text-decoration: none; }
+
+/*------------------------------------*\
+Layout
+\*------------------------------------*/
+
+header{ position: fixed; top: 0; left: 0; bottom: 0; min-width: 180px; z-index: 2; }
+.top{ background-color: #ffffff; margin-left: 180px; height: 48px; line-height: 48px; }
+.main{ margin-left: 180px; }
+footer{  }
+
+.content_w{ width: 100%; margin: 0 auto; }
+.content_w:after{ content: ""; display: block; clear: both; }
+
+@media screen and (max-width: 480px) {
+}
+@media screen and (max-width:767px) {
+}
+@media screen and (min-width:768px) {
+}
+@media screen and (min-width:1020px){
+}
+
+header{ background-color: #2b2e33; color: #ffffff; }
+.header-logo{ margin: 1rem 16px; font-family: 'Ubuntu', sans-serif; font-weight: 600; font-size: 1.8em; }
+.header-menu{ margin-top: 3em; }
+.header-menu__item,.header-menu__item_active{ position: relative; display: block; padding: 0 16px; line-height: 2.8em; color: #999999; }
+.header-menu__item:hover{ color: #ffffff; }
+.header-menu__item_active{ font-weight: bold; color: #ffffff; }
+.header-menu__item_active:before{ position: absolute; top: 45%; left: -1em; content: ""; display: inline-block; width: 1em; height: 1em; background-color: #ffffff; -webkit-transform: rotate(45deg) translateY(-50%); transform: rotate(45deg) translateY(-50%); }
+/*.header-menu__item_active:before{ position: absolute; top: 50%; left: -0.5em; content: ""; display: inline-block; width: 1em; height: 1em; border-radius: 50%; background-color: #ffffff; -webkit-transform: translateY(-50%); transform: translateY(-50%); }*/
+
+
+/* top */
+.top{ position: relative; min-width: 700px; }
+.top-search-box{ }
+.top-search-box input { width: 100%; padding: 0.8em 48px 0.8em 3em; border: none; background: url(images/search.png) 1em center no-repeat; background-color: ; background-size: 24px; }
+.top-admin-btn{ position: absolute; top: 0; right: 0; width: 48px; height: 48px; border-left: 1px solid #f0f0f0; background: url(images/admin.png) center no-repeat;  background-size: 24px; }
+
+
+/* main */
+.main-container{ margin: 2em auto; min-width: 700px; max-width: 1100px; padding: 0 20px; }
+.main-top{ position: relative; line-height: 2em; }
+.main-top:after{ content: ""; display: block; clear: both; }
+.main-top__title{ float: left; font-size: 1.4em; font-weight: bold; }
+.main-top__condition{ float: right; position: relative; font-size: 0.9em; }
+.main-top__condition .info{ display: inline-block; margin-right: .5em; line-height: 30px; color: #999999; }
+.main-top__condition .picker{ display: inline-block; float: right; margin: 0; padding: 0; }
+.main-top__condition .picker li{ list-style: none; float: left; width: 60px; margin-left: -1px; line-height:30px; cursor: pointer; text-align: center; color: #808080; border: 1px solid #cccccc; background-color: #ffffff; }
+.main-top__condition .picker li:hover{ background-color: #f7f7f7; }
+.main-top__condition .picker li:first-child{ border-radius: 5px 0 0 5px; }
+.main-top__condition .picker li:last-child{ border-radius: 0 5px 5px 0; }
+.main-top__condition .picker li.active{ color: #ffffff; background-color: #999999; }
+
+
+/* block */
+.main-block__3{ display: grid; grid-template-columns: 1fr 1fr 1fr; grid-gap: 16px; margin-top: 16px; }
+.main-block__2{ display: grid; grid-template-columns: 1fr 1fr; grid-gap: 16px; margin-top: 16px; }
+.main-block__1{ display: grid; grid-template-columns: 1fr; grid-gap: 16px; margin-top: 16px; }
+
+.total-revenue, .total-cost, .total-income{ padding: 1.5em; color: #ffffff; }
+.total-revenue b, .total-cost b, .total-income b{ display: block; font-size: 2em; font-weight: 500; }
+.total-revenue .subtitle, .total-cost .subtitle, .total-income .subtitle{ display: block; margin-top: 0.8em; }
+.total-revenue{ background-color: var(--green-color); }
+.total-cost{ background-color: var(--red-color); }
+.total-income{ background-color: var(--blue-color); }
+
+.activity-chart{ background-color: #ffffff; padding: 1.5em; }
+.activity-chart__top{ display: block; font-size: 1.2em; font-weight: bold; }
+
+.transaction-web{ background-color: #ffffff; padding: 1.5em; }
+.transaction-web__top{ display: block; font-size: 1.2em; line-height: 2em; font-weight: bold; }
+.transaction-web__list{ position: relative; line-height: 4em; border-top: 1px solid #f0f0f0; }
+.transaction-web__list .logo{ position: absolute; display: block; width: 1.6em; height: 1.6em; top: 50%; line-height: 1.8em; text-align: center; background-color: #808080; color: #ffffff; border-radius: 5px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
+.transaction-web__list .website{ padding-left: 2.4em; color: #999999; font-size: 0.9em;  }
+.transaction-web__list .num{ position: absolute; right: 4em; text-align: right; }
+.transaction-web__list .rate{ position: absolute; right: 0; }
+.transaction-web__list .increase{ color: var(--red-color); }
+.transaction-web__list .increase:before{ margin-right: 0.1em; content: "\21E7"; }
+.transaction-web__list .decrease{ color: var(--green-color); }
+.transaction-web__list .decrease:before{ margin-right: 0.1em; content: "\21E9"; }
+
+
+.last-order{ background-color: #ffffff; padding: 1.5em; }
+.last-order__top{ display: block; font-size: 1.2em; line-height: 2em; font-weight: bold; }
+
+
+
+
+
+
+
+
+
+
+

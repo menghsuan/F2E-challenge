@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>admin order</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.js"></script>
+  </head>
+  <body>
+
+    <header>
+      <div class="header-logo">Shoptime</div>
+      <div class="header-menu">
+        <a class="header-menu__item_active"><span>Home</span></a>
+        <a class="header-menu__item"><span>Orders</span></a>
+        <a class="header-menu__item"><span>Products</span></a>
+      </div>
+    </header>
+
+    <div class="top">
+      <div class="top-search-box">
+        <input type="text" placeholder="search..." name="search">
+      </div>
+      <div class="top-admin-btn"><a href="#"> </a></div>
+    </div>
+
+    <div class="main">
+      <div class="main-container">
+        <div class="main-top">
+          <span class="main-top__title">Overview</span>
+          <div class="main-top__condition">
+            <span class="info">2018/06/19 ~ 2018/06/25</span>
+            <ul class="picker">
+              <li>Daily</li>
+              <li class="active">Weekly</li>
+              <li>Monthly</li>
+              <li>Yearly</li>
+              <li>Costom</li>
+            </ul>
+          </div>
+        </div>
+
+        <section class="main-block__3">
+          <div class="total-revenue"><b>$ 54,420</b><span class="subtitle">Total Revenue</span></div>
+          <div class="total-cost"><b>$ 19,660</b><span class="subtitle">Total Cost</span></div>
+          <div class="total-income"><b>$ 34,880</b><span class="subtitle">Net Income</span></div>
+        </section>
+
+        <section class="main-block__1">
+          <div class="activity-chart"><span class="activity-chart__top">Activity</span><canvas id="activityChart" class="line"></canvas></div>
+        </section>
+        
+        <section class="main-block__2">
+          <div class="transaction-web">
+            <span class="transaction-web__top">Transaction Website</span>
+            <div class="transaction-web__list">
+              <span class="logo">F</span>
+              <span class="website">facebook.com</span>
+              <span class="num">45,836</span>
+              <span class="rate increase">20%</span>
+            </div>
+            <div class="transaction-web__list">
+              <span class="logo">G</span>
+              <span class="website">google.com</span>
+              <span class="num">23,582</span>
+              <span class="rate increase">12%</span>
+            </div>
+            <div class="transaction-web__list">
+              <span class="logo">S</span>
+              <span class="website">shoptify.com</span>
+              <span class="num">2,489</span>
+              <span class="rate decrease">15%</span>
+            </div>
+            <div class="transaction-web__list">
+              <span class="logo">W</span>
+              <span class="website">wordpress.com</span>
+              <span class="num">1,057</span>
+              <span class="rate decrease">20%</span>
+            </div>
+          </div>
+          <div class="last-order">
+            <span class="last-order__top">Latest Orders</span>
+          </div>
+        </section>
+        
+      </div>
+    </div>
+
+    <script>
+      var ctx = document.getElementById("activityChart");
+      var activityChart = new Chart(ctx, {
+        type: 'line',
+        data:{
+          labels: ["19 June", "20 June", "21 June", "22 June", "23 June", "24 June", "25 June"],
+          datasets: [{
+            label:'Total Revenue',
+            data:[ 7000, 5230, 8100, 9300, 6550, 10935, 7305],
+            fill: false,
+            borderColor:     'rgb(156, 204, 102, 1)',
+            backgroundColor: 'rgb(156, 204, 102, 1)',
+          },{
+            label:'Total Cost',
+            data:[ 2600, 2025, 3330, 2850, 3115, 2655, 3085],
+            fill: false,
+            borderColor:     'rgb(229, 92, 115, 1)',
+            backgroundColor: 'rgb(229, 92, 115, 1)',
+          },{
+            label:'Net Income',
+            data:[ 4400, 3205, 4770, 6450, 3435, 8280, 4220],
+            fill: false,
+            borderColor:     'rgba(115, 172, 229, 1)',
+            backgroundColor: 'rgba(115, 172, 229, 1)',
+          }]
+        } 
+      });
+    </script>
+
+  </body>
+</html>
