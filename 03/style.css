@@ -91,7 +91,7 @@ header{ background-color: #2b2e33; color: #ffffff; }
 
 .transaction-web{ background-color: #ffffff; padding: 1.5em; }
 .transaction-web__top{ display: block; font-size: 1.2em; line-height: 2em; font-weight: bold; }
-.transaction-web__list{ position: relative; line-height: 4em; border-top: 1px solid #f0f0f0; }
+.transaction-web__list{ position: relative; line-height: 4.5em; border-top: 1px solid #f0f0f0; }
 .transaction-web__list .logo{ position: absolute; display: block; width: 1.6em; height: 1.6em; top: 50%; line-height: 1.8em; text-align: center; background-color: #808080; color: #ffffff; border-radius: 5px; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 .transaction-web__list .website{ padding-left: 2.4em; color: #999999; font-size: 0.9em;  }
 .transaction-web__list .num{ position: absolute; right: 4em; text-align: right; }
@@ -104,8 +104,14 @@ header{ background-color: #2b2e33; color: #ffffff; }
 
 .last-order{ background-color: #ffffff; padding: 1.5em; }
 .last-order__top{ display: block; font-size: 1.2em; line-height: 2em; font-weight: bold; }
-
-
+.last-order__list{ position: relative; min-height: 100px; padding: 10px 0 10px 96px; border-top: 1px solid #f0f0f0; }
+.last-order__list .images{ position: absolute; top: 10px; left: 0; width: 80px; }
+.last-order__list .name{ display: block; margin-top: .5em; font-size: 1.2em; }
+.last-order__list .time,.last-order__list .member{ display: block; margin-top: 0.5em; padding-left: 1.4em; font-size: 0.9em; color: #999999; }
+.last-order__list .time{ background: url(images/time.png) left center no-repeat; background-size: 16px; }
+.last-order__list .member{ background: url(images/member.png) left center no-repeat; background-size: 16px;  }
+.last-order__list .total{ position: absolute; right: 0; bottom: 10px; font-weight: bold;}
+.last-order__list .total:before{ content: "Total"; display: block; margin-bottom: 0.4em; text-align: right; font-size: 0.9em; font-weight: normal;}
 
 
 
