@@ -2,7 +2,6 @@
 
 source : [The F2E - 前端修練精神時光屋](https://github.com/hexschool/TheF2E)
 
-
 ### week 01 : To do list
 
 - Demo : [link](https://menghsuan.github.io/F2E-challenge/01/)
@@ -15,8 +14,14 @@ source : [The F2E - 前端修練精神時光屋](https://github.com/hexschool/Th
 
   - UI | CSS web layout | Responsive Web Design
 
-### week 03 : Admin orde 
+### week 03 : Admin order
 
 - Demo : [link](https://menghsuan.github.io/F2E-challenge/03/)
 
   - UI | CSS web layout 
+
+### week 04 : Product Gallery 
+
+- Demo : [link](https://menghsuan.github.io/F2E-challenge/04/)
+
+  - UI | CSS web layout | CSS Grid
