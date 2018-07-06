@@ -25,3 +25,9 @@ source : [The F2E - 前端修練精神時光屋](https://github.com/hexschool/Th
 - Demo : [link](https://menghsuan.github.io/F2E-challenge/04/)
 
   - UI | CSS web layout | CSS Grid
+
+### week 05 : Comic viewer 
+
+- Demo : [link](https://menghsuan.github.io/F2E-challenge/05/)
+
+  - UI | CSS web layout
