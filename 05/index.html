@@ -1,0 +1,102 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Comic viewer</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="content_w">
+        <div class="header__logo"><a href="index.html">Comicomic</a></div>
+        <div class="header__search-box">
+          <input type="text" placeholder="search..." name="search">
+        </div>
+        <div class="header__search-box_mobile">
+          <input type="text" placeholder="Comicomic" name="search">
+        </div>
+        <div class="header__admin"><a href="#"></a></div>
+      </div>
+    </header>
+    <main>
+      <section class="content_w">
+        <ul class="breadcrumbs">
+          <li class="breadcrumbs-cateory"><a href="#" title="Comicomic">Comicomic</a> <span>&gt; </span></li>
+          <li class="breadcrumbs-cateory"><a href="#" title="Fusce/vehicula/dolor">Fusce/vehicula/dolor</a> <span>&gt; </span></li>
+          <li class="breadcrumbs-position">MY HEXSCHOOL</li>
+        </ul>
+      </section>
+      <section class="content_w comic-main">
+        <div class="comic-cover"><img src="images/comic%20cover.png"></div>
+        <div class="comic-info">
+          <h1 class="comic-info__title">MY HEXSCHOOL</h1>
+          <div class="comic-info__detail">
+            <dl><dt>Genres</dt><dd>Fusce/vehicula/dolor</dd></dl>
+            <dl><dt>Author</dt><dd>Namae Shiranai</dd></dl>
+            <dl><dt>Status</dt><dd>Going</dd></dl>
+            <dl><dt>Rate</dt><dd><span class="rate-star__on"></span><span class="rate-star__on"></span><span class="rate-star__on"></span><span class="rate-star__on"></span><span class="rate-star"></span></dd></dl>
+          </div>
+          <div class="comic-info__summary">
+            <b>Summary</b>
+            <div>If your banker breaks, you snap; if your apothecary by mistake sends you poison in your pills, you die. <br>Therefore, I say, I saw that this situation of mine was the precise situation of every mortal that has this Siamese connexion with a plurality of other mortals.</div>
+          </div>
+        </div>
+      </section>
+      <section class="content_w ad-slideshow">
+        <div class="slide_ad fade"><img src="images/ad-1.png"></div>
+        <div class="slide_ad fade"><img src="images/ad-2.png"></div>
+        <div class="slide_ad fade"><img src="images/ad-3.png"></div>
+      </section>
+      <section class="content_w comic-more">
+        <div class="tab-link">
+          <a id="chapter" onclick="SetRange('Chapter')" class="tab-link__item_active"><span>All Chapters</span></a>
+          <a id="review" onclick="SetRange('Review')" class="tab-link__item"><span>Reviews</span></a>
+        </div>
+        <div id="chaptersContent" class="tab-content chapters-all">
+          <a class="chapter-item" href="page.html" title="The F2E Challenge Start!"> 1 </a>
+          <a class="chapter-item tag-new" href="page.html" title="Todo List is Going Crazy!"> 2 </a>
+        </div>
+        <div id="reviewsContent" class="tab-content" style="display:none;">
+
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>made by Menghsuan</span>
+    </footer>
+
+    <script>
+      function SetRange(RANGE){
+        if(RANGE=="Chapter"){
+          document.getElementById("chapter").className = "tab-link__item_active";
+          document.getElementById("review").className = "tab-link__item";
+          document.getElementById("chaptersContent").style.display = "";
+          document.getElementById("reviewsContent").style.display = "none";
+        }
+        else{
+          document.getElementById("chapter").className = "tab-link__item";
+          document.getElementById("review").className = "tab-link__item_active";
+          document.getElementById("chaptersContent").style.display = "none";
+          document.getElementById("reviewsContent").style.display = "";
+        }
+      }
+      
+      
+      var slideIndex = 0;
+      showSlides();
+      function showSlides() {
+        var i;
+        var slides = document.getElementsByClassName("slide_ad");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}    
+        slides[slideIndex-1].style.display = "block";  
+        setTimeout(showSlides, 5000); 
+      }
+      
+    </script>
+  </body>
+</html>
