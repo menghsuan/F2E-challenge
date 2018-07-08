@@ -24,7 +24,7 @@
         <ul class="breadcrumbs">
           <li class="breadcrumbs-cateory"><a href="#" title="Comicomic">Comicomic</a> <span>&gt; </span></li>
           <li class="breadcrumbs-cateory"><a href="#" title="Fusce/vehicula/dolor">Fusce/vehicula/dolor</a> <span>&gt; </span></li>
-          <li class="breadcrumbs-position">MY HEXSCHOOL</li>
+          <li class="breadcrumbs-cateory"><a href="index.html" title="MY HEXSCHOOL">MY HEXSCHOOL</a> <span>: </span></li>
         </ul>
       </section>
       <section class="content_w control-bar">
@@ -57,7 +57,44 @@
           <a class="read-mode_dark"></a>
         </div>
       </section>
-      <section class="content_w comic-page-viewer">
+      <section class="content_w">
+        <div class="comic-page-viewer">
+          <div class="page-slide">
+            <div class="page-slide_images"><img src="images/comic%20cover.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-1.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-2.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-3.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-4.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-5.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-6.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-7.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-8.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-9.png"></div>
+            <div class="page-slide_images"><img src="images/storyboard-10.png"></div>
+            <a class="page-slide_prev" onclick="plusSlides(-1)">❮</a>
+            <a class="page-slide_next" onclick="plusSlides(1)">❯</a>
+          </div>
+        </div>
+        <div class="preview-row">
+          <div class="preview-row_column">
+            <div class="page-demo"><img src="images/comic%20cover.png"  onclick="currentSlide(1)" alt="cover"><span>cover</span></div>
+            <div class="page-demo"><img src="images/storyboard-1.png"  onclick="currentSlide(2)" alt="01"><span>01</span></div>
+            <div class="page-demo"><img src="images/storyboard-2.png"  onclick="currentSlide(3)" alt="02"><span>02</span></div>
+            <div class="page-demo"><img src="images/storyboard-3.png"  onclick="currentSlide(4)" alt="03"><span>03</span></div>
+            <div class="page-demo"><img src="images/storyboard-4.png"  onclick="currentSlide(5)" alt="04"><span>04</span></div>
+            <div class="page-demo"><img src="images/storyboard-5.png"  onclick="currentSlide(6)" alt="05"><span>05</span></div>
+            <div class="page-demo"><img src="images/storyboard-6.png"  onclick="currentSlide(7)" alt="06"><span>06</span></div>
+            <div class="page-demo"><img src="images/storyboard-7.png"  onclick="currentSlide(8)" alt="07"><span>07</span></div>
+            <div class="page-demo"><img src="images/storyboard-8.png"  onclick="currentSlide(9)" alt="08"><span>08</span></div>
+            <div class="page-demo"><img src="images/storyboard-9.png"  onclick="currentSlide(10)" alt="09"><span>09</span></div>
+            <div class="page-demo"><img src="images/storyboard-10.png"  onclick="currentSlide(11)" alt="10"><span>10</span></div>
+          </div>
+        </div>
+        <div class="ad-slideshow">
+          <div class="slide_ad fade"><img src="images/ad-1.png"></div>
+          <div class="slide_ad fade"><img src="images/ad-2.png"></div>
+          <div class="slide_ad fade"><img src="images/ad-3.png"></div>
+        </div>
         
       </section>
     </main>
@@ -66,4 +103,48 @@
       <span>made by Menghsuan</span>
     </footer>
   </body>
+
+  <script>
+    var slidePages = 1;
+    pageSlides(slidePages);
+
+    function plusSlides(n) {
+      pageSlides(slidePages += n);
+    }
+
+    function currentSlide(n) {
+      pageSlides(slidePages = n);
+    }
+
+    function pageSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("page-slide_images");
+      var dots = document.getElementsByClassName("page-demo");
+      if (n > slides.length) {slidePages = 1}
+      if (n < 1) {slidePages = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slidePages-1].style.display = "block";
+      dots[slidePages-1].className += " active";
+    }
+
+
+    var slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("slide_ad");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      slides[slideIndex-1].style.display = "block";  
+      setTimeout(showSlides, 5000); 
+    }
+  </script>
 </html>
