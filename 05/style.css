@@ -195,6 +195,7 @@ header{ width: 100%; height: 50px; line-height: 50px; background-color: #ffffff;
 .page-demo{ position: relative; }
 .page-demo span{ display: block; position: absolute; bottom: 0; width: 100%; text-align: center; line-height: 2em; color: var(--white); background-color: rgba(var(--dark-color),0.4 ); z-index: 2; }
 .page-demo img{ filter: opacity(0.5);}
+.page-demo img:hover{ filter: opacity(1);}
 
 .page-demo.active:after{ position: absolute; display: block; content: ""; top: -0.5em; left: calc( 50% - 0.8em); width: 1.6em; height: 0.6em; -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 clip-path: polygon(50% 0%, 0% 100%, 100% 100%); background-color: var(--black); z-index: 2; }
