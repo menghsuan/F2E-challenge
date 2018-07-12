@@ -12,12 +12,13 @@
       <div class="content_w">
         <div class="form-step">
           <span class="form-step__line"></span>
-          <a class="form-step__item active" href="">1</a>
-          <a class="form-step__item" href="">2</a>
-          <a class="form-step__item" href="">3</a>
-          <a class="form-step__item" href="">4</a>
+          <a class="form-step__item active" onclick="openStepForm(event, 'step1')" id="defaultOpen">1</a>
+          <a class="form-step__item" onclick="openStepForm(event, 'step2')">2</a>
+          <a class="form-step__item" onclick="openStepForm(event, 'step3')">3</a>
+          <a class="form-step__item" onclick="openStepForm(event, 'step4')">4</a>
         </div>
-        <form>
+
+        <form class="from-content" id="step1">
           <div class="form-top">
             <h1 class="form-top__title">Create Account</h1>
             <p class="form-top__sub">Glad to see you here!</p>
@@ -41,13 +42,94 @@
             <span class="form-item__info"></span>
           </div>
           <div class="form-bottom">
-            <button type="submit" class="form-bottom_btn">SUBMIT &amp; NEXT</button>
+            <button type="submit" class="form-bottom__btn">SUBMIT &amp; NEXT</button>
           </div>
         </form>
+
+        <form class="from-content" id="step2">
+          <div class="form-top">
+            <h1 class="form-top__title">General Infomation</h1>
+            <p class="form-top__sub">Tell us who you are!</p>
+          </div>
+          <div class="form-item">
+            <input class="form-item__input" type="text" required>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Email Address</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-item">
+            <input class="form-item__input" type="password" required>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Password</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-item">
+            <input class="form-item__input" type="password" required>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Comfirm Password</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-bottom">
+            <button type="submit" class="form-bottom__btn">SUBMIT &amp; NEXT</button>
+          </div>
+        </form>
+
+        <form class="from-content" id="step3">
+          <div class="form-top">
+            <h1 class="form-top__title">Update Profile Picture</h1>
+            <p class="form-top__sub">We wanna know you more!</p>
+          </div>
+          <div class="form-item">
+            <input class="form-item__input" type="password" required>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Comfirm Password</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-bottom">
+            <button type="submit" class="form-bottom__btn">SUBMIT &amp; NEXT</button>
+          </div>
+        </form>
+
+        <form class="from-content" id="step4">
+          <div class="form-top">
+            <h1 class="form-top__title">Payment Method</h1>
+            <p class="form-top__sub">Add your credit card infomation!</p>
+          </div>
+          <div class="form-item">
+            <input class="form-item__input" type="password" required>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Comfirm Password</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-bottom">
+            <button type="submit" class="form-bottom__btn">DONE</button>
+          </div>
+        </form>
+
       </div>
     </main>
     <footer>
       <span>made by Menghsuan</span>
     </footer>
   </body>
+
+  <script>
+    function openStepForm(evt, formStep) {
+      var i, formcontent, formlinks;
+      formcontent = document.getElementsByClassName("from-content");
+      for (i = 0; i < formcontent.length; i++) {
+        formcontent[i].style.display = "none";
+      }
+      formlinks = document.getElementsByClassName("form-step__item");
+      for (i = 0; i < formlinks.length; i++) {
+        formlinks[i].className = formlinks[i].className.replace(" active", "");
+      }
+      document.getElementById(formStep).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    // Get the element with id="defaultOpen" and click on it
+    document.getElementById("defaultOpen").click();
+  </script>
+
 </html>
