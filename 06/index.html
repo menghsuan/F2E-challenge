@@ -19,89 +19,141 @@
         </div>
 
         <form class="from-content" id="step1">
-          <div class="form-top">
+          <div class="form-top from-u-1">
             <h1 class="form-top__title">Create Account</h1>
             <p class="form-top__sub">Glad to see you here!</p>
           </div>
-          <div class="form-item">
-            <input class="form-item__input" type="text" required>
+          <div class="form-item from-u-1">
+            <input class="form-item__input" type="text" required="">
             <span class="form-item__bar"></span>
             <label class="form-item__label">Email Address</label>
             <span class="form-item__info"></span>
           </div>
-          <div class="form-item">
-            <input class="form-item__input" type="password" required>
+          <div class="form-item from-u-1">
+            <input class="form-item__input" type="password" required="">
             <span class="form-item__bar"></span>
             <label class="form-item__label">Password</label>
             <span class="form-item__info"></span>
           </div>
-          <div class="form-item">
-            <input class="form-item__input" type="password" required>
+          <div class="form-item from-u-1 warning">
+            <input class="form-item__input" type="password" required="" value="123456">
             <span class="form-item__bar"></span>
             <label class="form-item__label">Comfirm Password</label>
-            <span class="form-item__info"></span>
+            <span class="form-item__info">NOT MATCH</span>
           </div>
-          <div class="form-bottom">
-            <button type="submit" class="form-bottom__btn">SUBMIT &amp; NEXT</button>
+          <div class="form-bottom from-u-1">
+            <button type="submit" class="form-bottom__btn disable">SUBMIT &amp; NEXT</button>
           </div>
         </form>
 
         <form class="from-content" id="step2">
-          <div class="form-top">
+          <div class="form-top from-u-1">
             <h1 class="form-top__title">General Infomation</h1>
             <p class="form-top__sub">Tell us who you are!</p>
           </div>
-          <div class="form-item">
-            <input class="form-item__input" type="text" required>
+          <div class="form-item from-u-1-2">
+            <input class="form-item__input" type="text" required="">
             <span class="form-item__bar"></span>
-            <label class="form-item__label">Email Address</label>
+            <label class="form-item__label">Name (optional)</label>
             <span class="form-item__info"></span>
           </div>
-          <div class="form-item">
-            <input class="form-item__input" type="password" required>
+          <div class="form-item from-u-1-2">
+            <input class="form-item__input" type="text" required="" minlength="10" maxlength="10">
             <span class="form-item__bar"></span>
-            <label class="form-item__label">Password</label>
+            <label class="form-item__label">Phone</label>
             <span class="form-item__info"></span>
           </div>
-          <div class="form-item">
-            <input class="form-item__input" type="password" required>
+          <div class="form-item from-u-1 dropdown-trigger">
+            <input class="form-item__input" type="date" value="">
             <span class="form-item__bar"></span>
-            <label class="form-item__label">Comfirm Password</label>
+            <label class="form-item__label">Birth Date (optional)</label>
             <span class="form-item__info"></span>
           </div>
-          <div class="form-bottom">
+          <div class="form-item from-u-1">
+            <input class="form-item__input" type="text" required="">
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Street Address</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-item from-u-1-2 dropdown-trigger">
+            <select class="form-item__select" id="city" name="city">
+              <option value="" disabled selected>Select city</option>
+              <option value="Taipei">Taipei</option>
+              <option value="New Taipei">New Taipei</option>
+              <option value="Taoyuan">Taoyuan</option>
+            </select>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">City</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-item from-u-1-2 dropdown-trigger">
+            <select class="form-item__select" id="dist" name="dist">
+              <option value="" disabled selected>Select dist</option>
+              <option value="Beitou">Beitou</option>
+              <option value="Da'an">Da'an</option>
+              <option value="Datong">Datong</option>
+            </select>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Dist</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-bottom from-u-1">
             <button type="submit" class="form-bottom__btn">SUBMIT &amp; NEXT</button>
           </div>
         </form>
 
         <form class="from-content" id="step3">
-          <div class="form-top">
+          <div class="form-top from-u-1">
             <h1 class="form-top__title">Update Profile Picture</h1>
             <p class="form-top__sub">We wanna know you more!</p>
           </div>
-          <div class="form-item">
-            <input class="form-item__input" type="password" required>
+          <div class="form-item from-u-1">
+            <input class="form-item__input" type="file" required>
             <span class="form-item__bar"></span>
-            <label class="form-item__label">Comfirm Password</label>
+            <label class="form-item__label">UPLOAD UP TO 3 PHOTOS</label>
             <span class="form-item__info"></span>
           </div>
-          <div class="form-bottom">
+          <div class="form-bottom from-u-1">
             <button type="submit" class="form-bottom__btn">SUBMIT &amp; NEXT</button>
           </div>
         </form>
 
         <form class="from-content" id="step4">
-          <div class="form-top">
+          <div class="form-top from-u-1">
             <h1 class="form-top__title">Payment Method</h1>
             <p class="form-top__sub">Add your credit card infomation!</p>
           </div>
-          <div class="form-item">
-            <input class="form-item__input" type="password" required>
+          <div class="form-item from-u-1">
+            <input class="form-item__input" type="text" required minlength="16" maxlength="16">
             <span class="form-item__bar"></span>
-            <label class="form-item__label">Comfirm Password</label>
+            <label class="form-item__label">Card Number</label>
             <span class="form-item__info"></span>
           </div>
-          <div class="form-bottom">
+          <div class="form-item from-u-1-2">
+            <input class="form-item__input" type="text" required>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Cardholder Name</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-item from-u-1-2">
+            <input class="form-item__input" type="text" required>
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Bank Name</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-item from-u-1-3">
+            <input class="form-item__input" type="text" required minlength="3" maxlength="3">
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">CVV</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-item from-u-2-3 dropdown-trigger">
+            <input class="form-item__input" type="month" >
+            <span class="form-item__bar"></span>
+            <label class="form-item__label">Expire Date</label>
+            <span class="form-item__info"></span>
+          </div>
+          <div class="form-bottom from-u-1">
             <button type="submit" class="form-bottom__btn">DONE</button>
           </div>
         </form>
@@ -124,10 +176,9 @@
       for (i = 0; i < formlinks.length; i++) {
         formlinks[i].className = formlinks[i].className.replace(" active", "");
       }
-      document.getElementById(formStep).style.display = "block";
+      document.getElementById(formStep).style.display = "";
       evt.currentTarget.className += " active";
     }
-
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
   </script>

@@ -6,6 +6,8 @@ Variables
 :root {
   --main-color: #222222;
   --accent-color: #2094f3;
+  --accent-color-light: #64b5f6;
+  --accent-color-dark: #1976d2;
   --grey95: #f2f2f2; 
   --grey90: #e5e5e5; 
   --grey80: #cccccc; 
@@ -32,7 +34,11 @@ body{
 *, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 img{ border: 0px; vertical-align: middle; line-height: 0; width: 100%; height: auto; }
 input{ -webkit-appearance: none; font-size: 1em; }
+select{ }
 input[type="checkbox"] { -webkit-appearance: checkbox; }
+input[type="date"] { }
+input[type="date"]::-webkit-inner-spin-button,input[type="month"]::-webkit-inner-spin-button{ opacity: 0; }
+input[type="date"]::-webkit-calendar-picker-indicator,input[type="month"]::-webkit-calendar-picker-indicator { opacity: 0; }
 textarea:focus, input:focus{ outline: none; }
 a { text-decoration: none; }
 a:hover,a:focus { text-decoration: none; }
@@ -64,19 +70,30 @@ footer{ text-align: center; font-weight: 100; font-size: .8em; line-height: 3em;
 
 
 
+/* Form ================================= */
+form{ margin: 0; padding: 0em 1.2em; }
+/*.from-content{ display: flex; }*/
+.from-content{ display: grid; grid-template-columns: repeat( 6, 1fr ); grid-column-gap: 0.8em; }
+.from-u-1  { grid-column: span 6; }
+.from-u-1-2{ grid-column: span 3; }
+.from-u-1-3{ grid-column: span 2; }
+.from-u-2-3{ grid-column: span 4; }
+
+
 /* Form top ================================= */
 .form-top{ padding: 0em 0 1.8em 0; text-align: center; }
 .form-top__title{ margin: 0; font-weight: normal; }
 .form-top__sub{ margin: 0.5em 0 0 0; color: var(--grey50); }
 
 
-
-/* Form ================================= */
-form{ margin: 0; padding: 0em 1.2em; }
 .form-item{ position: relative; width: 100%; height: 56px; margin: 0 0 2em 0; border: 1px solid var(--grey90); border-radius: 5px; }
-.form-item__input{ display: block; width: 100%; height: 100%; padding: 2em 8px 8px 8px; font-size:1em; border:none; background-color: transparent; }
+.form-item__input,.form-item__select{ display: block; width: 100%; height: 100%; padding: 2em 8px 8px 8px; font-size: 1em; border: none; background-color: transparent; }
+.form-item__select{ padding: 1.6em 8px 8px 6px; -webkit-appearance: none; appearance: none; outline: none; }
+.form-item__select:invalid { color: var(--grey80); }
+.dropdown-trigger:after{ position: absolute; content: ""; top: 2em; right: 8px; width: 0; height: 0; z-index: 2; border-style: solid; border-width: 6px 6px; border-color: var(--grey30) transparent transparent transparent; }
+input[type="file"]{ opacity: 0; }
 .form-item__label{ position: absolute; top: 50%; left: 8px; transform: translateY(-50%); font-weight: normal; pointer-events: none; color: var(--grey70); transition:0.2s ease all; -moz-transition:0.2s ease all; -webkit-transition:0.2s ease all; }
-.form-item__input:focus ~ .form-item__label, .form-item__input:valid ~ .form-item__label{ top: 15px; font-size: 0.7em; color:var(--grey20); }
+.form-item__input:focus ~ .form-item__label, .form-item__input:valid ~ .form-item__label,.form-item__select:valid ~ .form-item__label{ top: 15px; font-size: 0.7em; color:var(--grey20); }
 .form-item__info{ padding-left: 8px; font-size: 0.8em; }
 
 
@@ -91,7 +108,9 @@ form{ margin: 0; padding: 0em 1.2em; }
 .form-item__input:focus ~ .form-item__bar:before, .form-item__input:focus ~ .form-item__bar:after { width:50%; }
 
 
+
 /* warning state */
+.warning:after{ position: absolute; content: " ! "; top: 50%; right: 8px; transform: translateY(-50%); width: 1.2em; height: 1.2em; text-align: center; font-weight: 900; color: var(--white); border-radius: 50%; background-color: var(--warning-color); }
 .warning .form-item__input:valid{ color: var(--warning-color); }
 .warning .form-item__bar{ height: 2px; background-color: var(--warning-color); z-index: 2; }
 .warning .form-item__bar:before,.warning .form-item__bar:after{ background-color: var(--warning-color); }
@@ -101,14 +120,10 @@ form{ margin: 0; padding: 0em 1.2em; }
 
 /* Form bottom ================================= */
 .form-bottom{ padding: 0 0 1.8em 0; }
-.form-bottom__btn{ width: 100%; height: 56px; line-height: 56px; border-radius: 5px; border: none; background-color: var(--accent-color); color: var(--white); }
-.form-bottom__btn:hover{ background-color: var(--grey40); color: var(--white); }
-
-
-
-
-
-
+.form-bottom__btn{ width: 100%; height: 56px; line-height: 56px; cursor: pointer; border-radius: 5px; border: none; background-color: var(--accent-color); color: var(--white); }
+.form-bottom__btn.disable{ background-color: var(--accent-color-light); }
+.form-bottom__btn.disable:hover{ background-color: var(--accent-color-light); }
+.form-bottom__btn:hover{ background-color: var(--accent-color-dark); color: var(--white); }
 
 
 
