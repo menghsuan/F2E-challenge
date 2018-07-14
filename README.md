@@ -36,4 +36,4 @@ source : [The F2E - 前端修練精神時光屋](https://github.com/hexschool/Th
 
 - Demo : [link](https://menghsuan.github.io/F2E-challenge/06/)
 
-  - UI | CSS web layout
+  - UI | CSS web layout | Responsive Web Design | CSS Grid
