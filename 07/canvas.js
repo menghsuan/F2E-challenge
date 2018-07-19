@@ -4,8 +4,12 @@ var ctx = canvas.getContext('2d');
 canvas.width = 600;
 canvas.height = 400;
 
+var time = 0;
 
-
+function draw() {  
+  time++; 
+  ctx.clearRect(0, 0, 400, 400);
+  
 //space background
 var bgLingrad = ctx.createLinearGradient(0, 0, 600, 600);
 bgLingrad.addColorStop(0.0, 'rgba(13, 30, 64, 0.9)');
@@ -34,14 +38,12 @@ ctx.fillStyle = bgVignetting3;
 ctx.fillRect(0, 0, 600, 600);
 
 
-// draw stars
+// draw stars | sorce: https://developer.mozilla.org/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths
 for (var j=1; j<50; j++) {
   ctx.save();
   ctx.fillStyle = 'rgba(255, 255, 255, 0.6';
-  //ctx.translate( 600-Math.floor(Math.random() * 600),
-  //               400-Math.floor(Math.random() * 400));
   ctx.translate( (Math.random() * 600),
-                (Math.random() * 400));
+                 (Math.random() * 400));
   drawStar(ctx,Math.floor(Math.random()*3)+2);
   ctx.restore();
 }
@@ -65,20 +67,13 @@ function drawStar(ctx,r) {
 
 
 
-//mountain background  https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
-//far
-/*
-var farBg = new Image();
-farBg.onload = function(){
-  ctx.drawImage(farBg,0,0);
-};
-farBg.src = 'images/far-bg.svg';
+//mountain background | https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 
 
 //mid
 var midBg = new Image();
 midBg.onload = function(){
-  ctx.drawImage(midBg,0,0);
+  ctx.drawImage(midBg, 0, 0, 1450, 400);
 };
 midBg.src = 'images/mid-bg.svg';
 
@@ -86,12 +81,12 @@ midBg.src = 'images/mid-bg.svg';
 
 
 
-
 //land
-ctx.fillStyle = '#E77458';
-ctx.fillRect(0, 380, 600, 20);
-*/
-
+var landBg = new Image();
+landBg.onload = function(){
+  ctx.drawImage(landBg,0,0, 1450, 400);
+};
+landBg.src = 'images/land.svg';
 
 
 
@@ -112,3 +107,6 @@ for (var i=0; i<13; i++) {
 }
 ctx.strokeStyle = 'rgba(255,255,255,0.1)';
 ctx.stroke();
+}
+
+draw();
