@@ -4,11 +4,6 @@ var ctx = canvas.getContext('2d');
 canvas.width = 600;
 canvas.height = 400;
 
-var time = 0;
-
-function draw() {  
-  time++; 
-  ctx.clearRect(0, 0, 400, 400);
   
 //space background
 var bgLingrad = ctx.createLinearGradient(0, 0, 600, 600);
@@ -38,35 +33,14 @@ ctx.fillStyle = bgVignetting3;
 ctx.fillRect(0, 0, 600, 600);
 
 
-// draw stars | sorce: https://developer.mozilla.org/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths
-for (var j=1; j<50; j++) {
-  ctx.save();
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.6';
-  ctx.translate( (Math.random() * 600),
-                 (Math.random() * 400));
-  drawStar(ctx,Math.floor(Math.random()*3)+2);
-  ctx.restore();
-}
-function drawStar(ctx,r) {
-  ctx.save();
-  ctx.beginPath()
-  ctx.moveTo(r,0);
-  for (var i=0;i<9;i++) {
-    ctx.rotate(Math.PI/5);
-    if(i%2 == 0) {
-      ctx.lineTo((r/0.525731)*0.200811,0);
-    } else {
-      ctx.lineTo(r,0);
-    }
-  }
-  ctx.closePath();
-  ctx.fill();
-  ctx.restore();
-}
 
 
+var time = 0;
 
-
+function draw() {  
+  time++; 
+  ctx.clearRect(0, 0, 400, 400);
+  
 //mountain background | https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
 
 
@@ -79,18 +53,16 @@ midBg.src = 'images/mid-bg.svg';
 
 
 
-
-
 //land
 var landBg = new Image();
+  let landx = time%1450;
 landBg.onload = function(){
-  ctx.drawImage(landBg,0,0, 1450, 400);
+  ctx.drawImage(landBg, landx, 0, 1450, 400);
 };
 landBg.src = 'images/land.svg';
+}
 
-
-
-
+setInterval(draw, 1000);
 
 
 //------ grid  ----- >> delete after finish
@@ -107,6 +79,35 @@ for (var i=0; i<13; i++) {
 }
 ctx.strokeStyle = 'rgba(255,255,255,0.1)';
 ctx.stroke();
+
+
+
+
+
+// draw stars | sorce: https://developer.mozilla.org/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths
+
+for (var j=1; j<50; j++) {
+  ctx.save();
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.6';
+  ctx.translate( (Math.random() * 600),
+                 (Math.random() * 400));
+  drawStar(ctx,Math.floor(Math.random()*3)+2);
+  ctx.restore();
 }
 
-draw();
+function drawStar(ctx,r) {
+  ctx.save();
+  ctx.beginPath()
+  ctx.moveTo(r,0);
+  for (var i=0;i<9;i++) {
+    ctx.rotate(Math.PI/5);
+    if(i%2 == 0) {
+      ctx.lineTo((r/0.525731)*0.200811,0);
+    } else {
+      ctx.lineTo(r,0);
+    }
+  }
+  ctx.closePath();
+  ctx.fill();
+  ctx.restore();
+}
