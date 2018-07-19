@@ -4,7 +4,7 @@ var ctx = canvas.getContext('2d');
 canvas.width = 600;
 canvas.height = 400;
 
-  
+
 //space background
 var bgLingrad = ctx.createLinearGradient(0, 0, 600, 600);
 bgLingrad.addColorStop(0.0, 'rgba(13, 30, 64, 0.9)');
@@ -36,30 +36,27 @@ ctx.fillRect(0, 0, 600, 600);
 
 
 var time = 0;
+var midBg = new Image();
+var landBg = new Image();
+midBg.src = 'images/mid-bg.svg';
+landBg.src = 'images/land.svg';
 
 function draw() {  
   time++; 
-  ctx.clearRect(0, 0, 400, 400);
   
-//mountain background | https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
+  let movex = time%1450;
+  //mountain background | 
+  //mid
+  midBg.onload = function(){
+    ctx.drawImage(midBg, movex, 0, 1450, 400);
+  };
 
 
-//mid
-var midBg = new Image();
-midBg.onload = function(){
-  ctx.drawImage(midBg, 0, 0, 1450, 400);
-};
-midBg.src = 'images/mid-bg.svg';
+  //land
+  landBg.onload = function(){
+    ctx.drawImage(landBg, movex, 0, 1450, 400);
+  };
 
-
-
-//land
-var landBg = new Image();
-  let landx = time%1450;
-landBg.onload = function(){
-  ctx.drawImage(landBg, landx, 0, 1450, 400);
-};
-landBg.src = 'images/land.svg';
 }
 
 setInterval(draw, 1000);
@@ -90,7 +87,7 @@ for (var j=1; j<50; j++) {
   ctx.save();
   ctx.fillStyle = 'rgba(255, 255, 255, 0.6';
   ctx.translate( (Math.random() * 600),
-                 (Math.random() * 400));
+                (Math.random() * 400));
   drawStar(ctx,Math.floor(Math.random()*3)+2);
   ctx.restore();
 }
