@@ -34,23 +34,6 @@ function drawBackground() {
 }
 
 
-// //------ grid  ----- >> delete after finish
-// ctx.beginPath();
-// for (var i = 0; i < 13; i++) {
-//   let pos = i * 50;
-//   ctx.moveTo(pos, 0);
-//   ctx.lineTo(pos, 400);
-//   ctx.fillText(pos, pos, 10);
-//
-//   ctx.moveTo(0, pos);
-//   ctx.lineTo(600, pos);
-//   ctx.fillText(pos, 0, pos);
-// }
-// ctx.strokeStyle = 'rgba(255,255,255,0.1)';
-// ctx.stroke();
-
-
-
 // draw stars | sorce: https://developer.mozilla.org/zh-TW/docs/Web/API/Canvas_API/Tutorial/Compositing#Clipping_paths
 var stars = [];  // to remember the position
 function prepareStars() {
@@ -133,3 +116,23 @@ function drawLand() {
   midX1--;
   midX2--;
 }
+
+
+var stone1 = new Image();
+var stone2 = new Image();
+var stone3 = new Image();
+stone1.src = 'images/stone1.svg'
+stone2.src = 'images/stone2.svg'
+stone3.src = 'images/stone3.svg'
+
+
+function Obstacles(){
+  ctx.drawImage(stone1, 0, 0, 160, 75);
+  ctx.drawImage(stone2, 0, 0, 140, 140);
+  ctx.drawImage(stone2, 0, 0, 145, 240);
+}
+Obstacles();
+
+
+
+
