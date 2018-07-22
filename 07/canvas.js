@@ -95,6 +95,7 @@ function drawLand() {
   ctx.clearRect(0, 0, width, height);
   drawBackground();
   drawStars();
+  
   if (midX1 <= -width) {
     midX1 = width;
   }
@@ -115,6 +116,7 @@ function drawLand() {
   landX2-=1;
   midX1--;
   midX2--;
+  Obstacles();
 }
 
 
@@ -127,11 +129,11 @@ stone3.src = 'images/stone3.svg'
 
 
 function Obstacles(){
-  ctx.drawImage(stone1, 0, 0, 160, 75);
-  ctx.drawImage(stone2, 0, 0, 140, 140);
-  ctx.drawImage(stone2, 0, 0, 145, 240);
+  ctx.drawImage(stone1, 40, 260, 160, 75);
+  ctx.drawImage(stone2, 220, 210, 140, 140);
+  ctx.drawImage(stone3, 420, 100, 145, 240);
 }
-Obstacles();
+
 
 
 
