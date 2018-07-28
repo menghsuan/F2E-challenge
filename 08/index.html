@@ -23,9 +23,9 @@
         <h1 class="mark">Q1</h1>
         <h5 class="title">If one day you get a gift that can change the rule of the world, which ability will you choose?</h5>
         <p class="info">Choose the answer appeared in your mind instantly</p>
-        <button class="ans">Destroy all humans in the world</button>
-        <button class="ans">Make the war never happened</button>
-        <button class="ans">You won’t get old and live forever</button>
+        <button class="ans ans1">Destroy all humans in the world</button>
+        <button class="ans ans1">Make the war never happened</button>
+        <button class="ans ans1">You won’t get old and live forever</button>
       </div>
       <div class="content-bg"></div>
       <div class="animate">
@@ -34,11 +34,37 @@
         <div class="triangle"><div class="triangle_item"></div></div>
       </div>
     </div>
-    <div id="question2">
-
+    <div id="question2" class="">
+      <div class="content">
+        <h1 class="mark">Q2</h1>
+        <h5 class="title">Imagine you’re almost late, but totally lost at a forked road. Which way do you prefer to go?</h5>
+        <p class="info">Choose the answer appeared in your mind instantly</p>
+        <button class="ans ans2">The left one</button>
+        <button class="ans ans2">The right one</button>
+        <button class="ans ans2">Open google map</button>
+      </div>
+      <div class="content-bg"></div>
+      <div class="animate">
+        <div class="square"><div class="square_item"></div></div>
+        <div class="circle"><div class="circle_item"></div></div>
+        <div class="triangle"><div class="triangle_item"></div></div>
+      </div>
     </div>
     <div id="question3">
-
+      <div class="content">
+        <h1 class="mark">Q3</h1>
+        <h5 class="title">When you’re in a exam which you barely prepared for, which is your priority solution?</h5>
+        <p class="info">Choose the answer appeared in your mind instantly</p>
+        <button class="ans ans2">Take a nap right away</button>
+        <button class="ans ans2">The right one</button>
+        <button class="ans ans2">Open google map</button>
+      </div>
+      <div class="content-bg"></div>
+      <div class="animate">
+        <div class="square"><div class="square_item"></div></div>
+        <div class="circle"><div class="circle_item"></div></div>
+        <div class="triangle"><div class="triangle_item"></div></div>
+      </div>
     </div>
     <div id="result">
 
@@ -55,8 +81,21 @@ https://github.com/Prinzhorn/skrollr/tree/master/examples
         setTimeout(function(){
           $("#start").remove();
         }, 8000);
+
+        $(".ans1").click(()=>{
+          $("#question1").remove();
+          $("#question2").addClass("question2");
+        });
+
+        $(".ans2").click(function(){
+          $("#question2").remove();
+          $("#question3").addClass("question3");
+        });
+
+
       });
     </script>
+
     <script type="text/javascript" src="http://prinzhorn.github.io/skrollr/dist/skrollr.min.js"></script>
     <script type="text/javascript">
       var s = skrollr.init();//初始化
