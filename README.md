@@ -48,6 +48,6 @@ source : [The F2E - 前端修練精神時光屋](https://github.com/hexschool/Th
 
 - Demo : [link](https://menghsuan.github.io/F2E-challenge/08/)
 
-  - CSS web layout | CSS Animation 
+  - CSS web layout | CSS Animation | jQuery
   
   
