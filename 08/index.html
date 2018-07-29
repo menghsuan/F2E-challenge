@@ -66,16 +66,46 @@
         <div class="triangle"><div class="triangle_item"></div></div>
       </div>
     </div>
-    <div id="result">
 
+    <div id="result" class="result">
+      <div class="result_bg" data-0="background:hsl(338, 100%, 62%);" data-200="background:hsl(338, 100%, 62%);" data-450="background:hsl(228, 100%, 62%);" data-end="background:hsl(920, 100%, 50%);"></div>
+      
+      <div class="step1">
+        <div class="cover-block" data-0="width:40%;bottom: 0;" data-200="width:100%;bottom: 0;"></div>
+        <div class="result_text" data-0="opacity: 1; top:50%;" data-100="opacity: 1; top:50%;" data-330="opacity: 1; top:50%;" data-430="opacity: 0; top:50%;">
+          <h1 class="title">ALL DONE!</h1>
+          <h5 class="subtitle">Keep scrolling to show the result</h5>        
+        </div>
+        <div class="triangle triangle-white" data-200-="opacity:0;" data-200="top:100%; left:50%; transform:scale(1.2) rotate(45deg); opacity:1;" data-300="top:20%; left:110%; transform: scale(1.6) rotate(45deg)"></div>
+        <div class="triangle triangle-black" data-210-="opacity:0;" data-210="top: 90%; left:-20%; transform:scale(1.6) rotate(45deg); opacity:1;" data-320="top:-20%; left:110%; transform:scale(2) rotate(45deg)"></div>
+        <div class="triangle triangle-blue" data-240-="opacity:0;" data-240="top:70%; left:-30%; transform:scale(2) rotate(55deg); opacity:1;" data-360="top:-70%; left:130%; transform:scale(2.2) rotate(60deg)"></div>
+        <div class="triangle triangle-white" data-260-="opacity:0;" data-260="top:50%; left:-20%; transform:scale(0.6) rotate(45deg); opacity:1; z-index:6" data-340="top:-50%; left:120%; transform:scale(0.8) rotate(30deg); z-index:6"></div>
+        <div class="triangle triangle-black" data-270-="opacity:0;" data-270="top:110%; left:-20%; transform:scale(1) rotate(50deg); opacity:1;" data-360="top:0%; left:140%; transform:scale(1.2) rotate(40deg)"></div>
+        <div class="triangle triangle-blue" data-270-="opacity:0;" data-270="top:200%; left:-60%; transform:scale(10) rotate(45deg); z-index:9; opacity:1;" data-500="top:-100%; left:150%; transform:scale(10) rotate(45deg); z-index:9; opacity:1;" data-500="opacity:0;" ></div>
+      </div>
+      <div class="step2">
+        <div class="cover-block" data-410="width:100%; opacity: 0;" data-420="width:100%;opacity: 1;" data-800="width:100%; opacity: 1;"></div>
+        <div class="result_text" data-450="opacity: 0;" data-500="opacity: 1;" data-800="opacity: 1;" data-900="opacity: 0;">
+          <h1 class="title">NOW CACULATING...</h1>
+          <h5 class="subtitle">Keep scrolling to show the result</h5>        
+        </div>
+      </div>
+      <div class="step3">
+        <div class="result_text" data-900="opacity: 0; top:50%" data-1000="opacity: 1; top:50%" data-1300="opacity: 1; top:50%" data-1600="opacity: 0; top:-10%;">
+          <h1 class="title">YOU ARE…</h1>
+          <h5 class="subtitle">Keep scrolling to show the result</h5>        
+        </div>
+      </div>
+      <div class="step4">
+        <div class="result_text" data-900="opacity: 0;">
+          <h5 class="subtitle">Your personality type is</h5> 
+          <h1 class="title">TRIANGLE!</h1>       
+        </div>
+      </div>
     </div>
 
 
-    <!--
-http://lala0812.logdown.com/posts/240837-skrollr-easily-implement-css3-html5-parallax-scrolling
-https://github.com/Prinzhorn/skrollr/tree/master/examples
 
--->
     <script>
       $(document).ready(function(){
         setTimeout(function(){
@@ -91,11 +121,12 @@ https://github.com/Prinzhorn/skrollr/tree/master/examples
           $("#question2").remove();
           $("#question3").addClass("question3");
         });
-        
+
         $(".ans3").click(()=>{
           $("#question3").remove();
+          $("#result").addClass("result");
         });
-        
+
       });
     </script>
 
