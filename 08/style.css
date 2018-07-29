@@ -257,19 +257,33 @@ Layout
 .result .step1{ background-color: var(--color-pink); }
 .result .step1 .cover-block{ position: fixed; z-index: 2; top: 0; bottom: 0; right: 0; background-color: var(--color-light-blue);}
 .result .step1 .result_text{ padding: 1em; color: var(--white); background-color: var(--color-dark-blue); }
-.result .triangle{ position: fixed; width: 0; height: 0; border-style: solid; border-width: 0 100px 175px 100px; transform: rotate(45deg); }
+.result .step1 .triangle{ position: fixed; width: 0; height: 0; border-style: solid; border-width: 0 100px 175px 100px; transform: rotate(45deg); }
 .triangle-white{ border-color: transparent transparent #ffffff transparent; z-index: 3; }
 .triangle-black{ border-color: transparent transparent #000000 transparent; z-index: 4; }
 .triangle-blue { border-color: transparent transparent var(--color-dark-blue) transparent; z-index: 5; }
 
-
 .result .step2 .result_text{ color: var(--white); }
 .result .step2 .cover-block{ position: fixed; z-index: 2; top: 0; bottom: 0; right: 0; background-color: var(--color-dark-blue);}
+.result .step2 .square{ position: fixed; width: 200px; height: 200px; transform: rotate(45deg); }
+.square-pink{ background-color: var(--color-pink); z-index: 3; }
+.square-black{ background-color: var(--black); z-index: 4; }
+.square-blue { background-color: var(--color-light-blue); z-index: 5; }
 
 .result .step3 .result_text{ color: var(--black); }
+.result .step3 .cover-block{ position: fixed; z-index: 2; top: 0; bottom: 0; right: 0; background-color: var(--color-pink);}
+.result .step3 .circle{ position: fixed; width: 200px; height: 200px; border-radius: 50%; }
+.circle-white{ background-color: var(--white); z-index: 3; }
+.circle-black{ background-color: var(--black); z-index: 4; }
+.circle-blue { background-color: var(--color-light-blue); z-index: 5; }
+
+
+
 .result .step4 .result_text{ color: var(--white); }
-
-
+.result .step4 .cover-block{ position: fixed; z-index: 2; top: 0; bottom: 0; right: 0; background-color: var(--color-light-blue);}
+.result .step4 .triangle{ position: fixed; width: 0; height: 0; border-style: solid; border-width: 0 100px 175px 100px; transform: }
+.triangle-white{ border-color: transparent transparent #ffffff transparent; z-index: 3; }
+.triangle-black{ border-color: transparent transparent #000000 transparent; z-index: 4; }
+.triangle-blue { border-color: transparent transparent var(--color-dark-blue) transparent; z-index: 5; }
 
 
 
