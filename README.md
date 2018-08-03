@@ -53,6 +53,6 @@ source : [The F2E - 前端修練精神時光屋](https://github.com/hexschool/Th
  
 ### week 09 : Skill Tree
 
-- Demo : [link](https://menghsuan.github.io/F2E-challenge/00/)
+- Demo : [link](https://menghsuan.github.io/F2E-challenge/09/)
 
   - CSS web layout | CSS flex 
